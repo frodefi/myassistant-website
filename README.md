@@ -1,9 +1,3 @@
-# Switch
-
-A landing page template.
-
-* [Getting started](#getting-started)
-
 ## Getting started
 * First, ensure that node.js & npm are both installed. If not, choose your OS and installation method from [this page](https://nodejs.org/en/download/package-manager/) and follow the instructions.
 * This template requires Node 14 to work. You can handle multiple node versions with [NVM](https://github.com/nvm-sh/nvm) 
