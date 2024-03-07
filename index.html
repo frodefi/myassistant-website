@@ -4,25 +4,24 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Web Pages</title>
+		<title>MyAssistant.pro</title>
 		<link
 			href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="dist/css/style.css" />
-		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<link rel="stylesheet" type="text/css" href="./styles.css" />
 		<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-		<script src="index.js"></script>
 		<script
 			type="text/javascript"
-			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
 		></script>
-		<script type="text/javascript">
+		<script type="text/javascript" defer>
 			(function () {
-				/* emailjs.init("vlMrwOZ_7f5ZcDghW"); */ // moj kod
-				emailjs.init("RdZuJNdKM4yDtnCAo"); // frodov
+				emailjs.init("RdZuJNdKM4yDtnCAo");
 			})();
 		</script>
+		<!-- <script src="index.js" defer></script> -->
 	</head>
 
 	<body class="is-boxed has-animations">
@@ -49,15 +48,12 @@
 									Kansellering i siste liten? Din tid er dyr
 									og du har heller ikke tid til å ringe rundt
 									i siste listen for å tilby timen til andre.
-									Sett bort jobben og tjen mer penger!
-									Tjenesten koster mindre enn en
-									behandlingstime per måned..
 								</p>
 								<div class="hero-cta">
 									<a
 										class="button button-primary"
-										href="#contact_us"
-										>Buy it now</a
+										href="#contact-us"
+										>Kontakt oss</a
 									>
 								</div>
 							</div>
@@ -80,7 +76,7 @@
 									<img
 										id="picture1"
 										class="hero-media-image asset-light"
-										src="./pictures/text10.png"
+										src="./pictures/text12.png"
 										alt="Hero media"
 									/>
 								</div>
@@ -89,23 +85,49 @@
 					</div>
 				</section>
 
-				<section class="features section">
+				<section class="features">
 					<div class="container">
-						<div class="features-inner section-inner">
-							<div class="features-header text-center">
-								<div id="produktene" class="container-sm">
-									<h2 class="section-title mt-0">
-										Produktene
-									</h2>
-									<p
-										id="produktene_p"
-										class="section-paragraph"
-									>
+						<div class="section-inner">
+							<div class="text-center">
+								<div class="container-sm">
+									<h2 class="mt-0">Fordeler</h2>
+									<p class="features-intro section-paragraph">
 										MyAssistant.pro gjør at du kan
 										konsentrere deg om å jobbe med dine
 										kunder.
 									</p>
-									<div class="features-image"></div>
+									<div class="features-image">
+										<img
+											class="features-illustration asset-dark"
+											src="dist/images/features-illustration-dark.svg"
+											alt="Feature illustration"
+										/>
+										<img
+											class="features-box asset-dark"
+											src="dist/images/features-box-dark.svg"
+											alt="Feature box"
+										/>
+										<img
+											class="features-illustration asset-dark"
+											src="dist/images/features-illustration-top-dark.svg"
+											alt="Feature illustration top"
+										/>
+										<img
+											class="features-illustration asset-light"
+											src="dist/images/features-illustration-light.svg"
+											alt="Feature illustration"
+										/>
+										<img
+											class="features-box asset-light"
+											src="pictures/image22.png"
+											alt="Feature box"
+										/>
+										<img
+											class="features-illustration asset-light"
+											src="dist/images/features-illustration-top-light.svg"
+											alt="Feature illustration top"
+										/>
+									</div>
 								</div>
 							</div>
 							<div class="features-wrap">
@@ -139,34 +161,48 @@
 									</div>
 								</div>
 								<div class="feature is-revealing">
-									<div class="feature-inner"></div>
-									<div class="feature-icon"></div>
-									<img
-										class="asset-light"
-										src="dist/images/feature-02-light.svg"
-										alt="Feature 02"
-									/>
-									<img
-										class="asset-dark"
-										src="dist/images/feature-02-dark.svg"
-										alt="Feature 02"
-									/>
-									<!-- </div> -->
-									<div class="feature-content">
-										<h3 class="feature-title mt-0">
-											Tilby ledige time til ventelisten
-										</h3>
-										<p class="text-sm mb-0">
-											Om det skulle komme en kansellering,
-											så blir den ledige timen raskt fylt
-											opp fra ventelisten, etter
-											prioritert rekkefølge. Haster det,
-											så er det førstemann til mølla.
-										</p>
+									<div class="feature-inner">
+										<div class="feature-icon">
+											<img
+												class="asset-light"
+												src="dist/images/feature-02-light.svg"
+												alt="Feature 02"
+											/>
+											<img
+												class="asset-dark"
+												src="dist/images/feature-02-dark.svg"
+												alt="Feature 02"
+											/>
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title mt-0">
+												Tilby ledige time til
+												ventelisten
+											</h3>
+											<p class="text-sm mb-0">
+												Om det skulle komme en
+												kansellering, så blir den ledige
+												timen raskt fylt opp fra
+												ventelisten, etter prioritert
+												rekkefølge. Haster det, så er
+												det førstemann til mølla.
+											</p>
+										</div>
 									</div>
 								</div>
+							</div>
+						</div>
+						<div class="section-inner">
+							<div class="features-header text-center">
+								<div class="container-sm">
+									<h2 class="mt-0">Tjenester og priser</h2>
+									<p class="features-intro section-paragraph">
+										Du kan velge 3 nivåer:
+									</p>
+								</div>
+							</div>
+							<div class="features-wrap">
 								<div class="feature is-revealing">
-									<h2 class="priser">Priser</h2>
 									<div class="feature-inner">
 										<div class="feature-icon">
 											<img
@@ -181,15 +217,73 @@
 											/>
 										</div>
 										<div class="feature-content">
-											<!-- <h2 class="feature-title mt-0">Priser</h2> -->
 											<h3 class="feature-title mt-0">
-												“No cure no pay”
+												Selvbetjent via app
 											</h3>
 											<p class="text-sm mb-0">
-												Ingen avbestillinger en måned?
-												Ingen problem! Du betaler da
-												ingenting, heller ikke for alle
-												påminnelsene sendt ut på SMS.
+												En enkel app som kan brukes like
+												lett på mobilen som på
+												datamaskinen. Påminnelser og
+												forespørsler til dine kunder
+												skjer med SMS og epost om du
+												ikke har tid til å ringe selv.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="feature is-revealing">
+									<div class="feature-inner">
+										<div class="feature-icon">
+											<img
+												class="asset-light"
+												src="dist/images/feature-02-light.svg"
+												alt="Feature 02"
+											/>
+											<img
+												class="asset-dark"
+												src="dist/images/feature-02-dark.svg"
+												alt="Feature 02"
+											/>
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title mt-0">
+												Påminnelser med oppringing
+											</h3>
+											<p class="text-sm mb-0">
+												En hyggelig medarbeider ringer
+												til dine kunder for å minne om
+												avtaler dagen. Hvis kunden ikke
+												kan møte, så blir avtalen booket
+												om og systemet finner automatisk
+												ny kunde fra ventelisten.
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="feature is-revealing">
+									<div class="feature-inner">
+										<div class="feature-icon">
+											<img
+												class="asset-light"
+												src="dist/images/feature-02-light.svg"
+												alt="Feature 02"
+											/>
+											<img
+												class="asset-dark"
+												src="dist/images/feature-02-dark.svg"
+												alt="Feature 02"
+											/>
+										</div>
+										<div class="feature-content">
+											<h3 class="feature-title mt-0">
+												Full kundeservice
+											</h3>
+											<p class="text-sm mb-0">
+												Ønsker du at innkommende anrop
+												blir besvart mens du er opptatt?
+												Med full kundeservice så vil en
+												hyggelig medarbeider svare på
+												samtalene mens du selv jobber.
 											</p>
 										</div>
 									</div>
@@ -198,85 +292,55 @@
 						</div>
 					</div>
 				</section>
-				<div id="div_line"></div>
-				<section class="cta section">
+				<section id="contact-us">
 					<div class="container-sm">
-						<div
-							id="iner_section_margin"
-							class="cta-inner section-inner"
-						>
-							<div id="contact_us" class="cta-header text-center">
-								<div
-									id="form"
-									class="contact-form"
-									onsubmit="handleSubmit(event)"
+						<div class="section-inner text-center">
+							<h2 class="mt-0">Kontakt oss</h2>
+							<p class="m-0">
+								Ring
+								<span class="contact_data">
+									(+47) 92 44 33 33</span
+								>, send epost til
+								<span class="contact_data"
+									>info@myassistant.pro.</span
 								>
+							</p>
+							<p>
+								Eller legg igjen ditt telefonnummer her, så
+								ringer vi deg tilbake.
+							</p>
+							<form id="form" class="flex-col gap-1">
+								<input
+									type="text"
+									id="name"
+									placeholder="Skriv ditt navn"
+									class="p-8"
+								/>
+								<input
+									id="telefonnummer"
+									type="tel"
+									maxlength="15"
+									placeholder="Skriv ditt telefonr eller epost"
+									class="p-8"
+								/>
+								<button
+									id="callback_button"
+									disabled
+									class="button-primary button-disabled rounded p-8"
+								>
+									Kontakt meg
+								</button>
+								<div id="popup" class="popup">
+									<div id="popup__content">
+										<p id="popup__message"></p>
+										<button id="popup__button">ok</button>
+									</div>
 									<div
-										class="contact-form_Label_centar"
+										id="popup__overlay"
+										class="overlay"
 									></div>
-									<h2 class="section-title mt-0">
-										Kontakt oss
-									</h2>
-									<p
-										id="phone_number"
-										class="section-paragraph"
-									>
-										Tjenesten koster mindre enn en
-										behandlingstime per måned, og kun hvis
-										det faktisk er avbestillinger som er
-										blitt dekket opp.
-									</p>
-									<div
-										class="contact-form_Label_centar_label"
-									>
-										<div>
-											<span class="fhone_number_span"
-												>Kontakt oss på telefon
-												<span class="phone_color">
-													(+47) 92 44 33 33</span
-												>
-												og epost
-												<span class="email_color"
-													>info@myassistant.pro.</span
-												>
-											</span>
-											<!--  <hr class="phone_number_Line" > -->
-											<p class="phone_number_span">
-												Eller legg igjen ditt
-												telefonnummer her, så ringer vi
-												deg tilbake.
-											</p>
-										</div>
-										<div class="phone_button">
-											<label class="input-label">
-												<input
-													type="tel"
-													id="name"
-													name="name"
-													oninput="handleInput(this)"
-													placeholder="Skriv inn ditt telefonnummer"
-													class="input-field"
-													maxlength="8"
-												/>
-											</label>
-										</div>
-									</div>
-									<div class="buton_div">
-										<button
-											id="callBackButton"
-											disabled
-											class="button disabled-button"
-											onclick="sendMail()"
-										>
-											Send
-										</button>
-									</div>
 								</div>
-								<div id="popup" class="popup"></div>
-								<div class="contact-right">
-									<!-- Content for EarthCanvas (Not provided in the code) -->
-								</div>
-							</div>
+							</form>
 						</div>
 					</div>
 				</section>

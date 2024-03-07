@@ -1,26 +1,19 @@
 .hero {
 	text-align: center;
-    padding-top: 48px;
+	padding-top: 48px;
 	padding-bottom: 88px;
 }
 
 .hero-copy {
-    position: relative; /* To display elements above hero illustrations */
+	position: relative; /* To display elements above hero illustrations */
 }
 
 .hero-paragraph {
-    margin-bottom: 32px;
-}
-
-.hero-cta {
-	max-width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 80px;
+	margin-bottom: 32px;
 }
 
 .lights-toggle {
-	color: rgba(color(typography, 2), .64);
+	color: rgba(color(typography, 2), 0.64);
 }
 
 .header-illustration {
@@ -41,9 +34,10 @@
 }
 
 .hero-media-illustration {
+	margin-top: 30px;
 	position: absolute;
-    top: -10%;
-    left: -15px;
+	top: -10%;
+	left: -15px;
 
 	img,
 	svg {
@@ -52,45 +46,34 @@
 }
 
 .hero-media-container {
+	margin-top: 30px;
 	position: relative;
 }
 
 .hero-media-image {
 	margin: 0 auto;
-	box-shadow: 48px 16px 48px rgba(color(bg, 1i), .12);
+	box-shadow: 48px 16px 48px rgba(color(bg, 1i), 0.12);
 	border-radius: 4px;
-	transform: perspective(1000px) rotateY(16deg) rotateX(2deg) rotateZ(-7deg) scaleY(.95) translatex(2%);
+	transform: perspective(1000px) rotateY(16deg) rotateX(2deg) rotateZ(-7deg)
+		scaleY(0.95) translatex(2%);
 
 	.lights-off & {
-		box-shadow: 48px 16px 48px rgba(darken(color(bg, 1i), 35%), .2);
+		box-shadow: 48px 16px 48px rgba(darken(color(bg, 1i), 35%), 0.2);
 	}
 }
 
-@include media( '<medium' ) {
-
-	.hero-cta {
-
-		> * {
-			display: flex;
-
-			+ * {
-				margin-top: 32px;
-			}
-		}
-	}
-
+@include media("<medium") {
 	.lights-toggle {
 		justify-content: center;
 	}
 }
 
-@include media( '>medium' ) {
-
-    .hero {
+@include media(">medium") {
+	.hero {
 		text-align: left;
-        padding-top: 88px;
+		padding-top: 88px;
 		padding-bottom: 120px;
-    }
+	}
 
 	.hero-inner {
 		/* Split hero in two half */
@@ -98,13 +81,13 @@
 		justify-content: space-between;
 	}
 
-    .hero-copy {
-        padding-top: 40px;
-        padding-right: 48px;
-        min-width: 448px;
-        max-width: 512px;
+	.hero-copy {
+		padding-top: 40px;
+		padding-right: 48px;
+		min-width: 448px;
+		max-width: 512px;
 		z-index: 1;
-    }
+	}
 
 	.hero-title {
 		margin-bottom: 16px;
@@ -112,20 +95,6 @@
 
 	.hero-paragraph {
 		margin-bottom: 32px;
-	}
-
-	.hero-cta {
-		display: flex;
-		align-items: center;
-		margin: 0;
-
-		.button {
-			min-width: 170px;
-
-			&:first-child {
-				margin-right: 32px;
-			}
-		}
 	}
 
 	.header-illustration {

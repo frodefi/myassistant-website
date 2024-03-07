@@ -1,41 +1,62 @@
+const nameInput = document.getElementById("name");
+const telefonnummerInput = document.getElementById("telefonnummer");
+const callbackButton = document.getElementById("callback_button");
+const form = document.getElementById("form");
+const popup = document.getElementById("popup");
+const popupMessage = document.getElementById("popup__message");
+const popupButton = document.getElementById("popup__button");
 
+popupButton.addEventListener("click", () => {
+  hidePopup();
+});
 
-function handleInput(inputField) {
-    const button = document.getElementById('callBackButton');
+telefonnummerInput.addEventListener("input", function () {
+  if (telefonnummerInput.value.length >= 5) {
+    callbackButton.disabled = false;
+    callbackButton.classList.remove("button-disabled");
+  } else {
+    callbackButton.disabled = true;
+    callbackButton.classList.add("button-disabled");
+  }
+});
 
-    if (inputField.value.length === 8) {
-        button.disabled = false;
-        button.textContent = 'Send';
-        inputField.style.border = '1px solid #ccc';
-    } else {
-        button.disabled = true;
-        button.textContent = 'Ring meg tilbake';
-        inputField.style.border = '2px solid red';
-    }
-}
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  if (telefonnummerInput.value.length >= 5) {
+    const phoneNumber = telefonnummerInput.value;
+    const formattedPhoneNumber = formatPhoneNumber(phoneNumber);
+    callbackButton.disabled = true;
+    callbackButton.classList.add("button-disabled");
+    var params = {
+      user_name: nameInput.value || "",
+      user_phone: telefonnummerInput.value,
+    };
 
-document.getElementById('callBackButton').addEventListener('click', function () {
-    const inputField = document.querySelector('input[type="tel"]');
-    if (inputField.value.length === 8) {
-        const phoneNumber = inputField.value;
-        const formattedPhoneNumber = formatPhoneNumber(phoneNumber);
-        const popup = document.getElementById('popup');
-        popup.textContent = `Takk. Du vil snart blir oppringt på telefonnummer: ${formattedPhoneNumber}`;
-        popup.style.display = 'block';
-
-         // Ispraznite polje za unos broja
-         inputField.value = '';
-
-        // Promenite tekst na dugmetu na "OK"
-        this.textContent = 'OK';
-
-        // Onemogućite dugme kako se ne bi ponovno kliknulo
-        this.disabled = true;
-    }
+    const serviceID = "service_8wyi8x2";
+    const templateID = "template_2w8nqvk";
+    emailjs
+      .send(serviceID, templateID, params)
+      .then(() => {
+        nameInput.value = "";
+        telefonnummerInput.value = "";
+        popupMessage.textContent = `Takk. Du vil snart blir oppringt på telefonnummer: ${formattedPhoneNumber}`;
+        showPopup();
+      })
+      .catch(() => {
+        popupMessage.textContent = `Something went wrong, please try again later!`;
+        showPopup();
+      });
+  }
 });
 
 function formatPhoneNumber(phoneNumber) {
-  
-    return phoneNumber.replace(/(\d{3})(\d{2})(\d{3})/, '$1 $2 $3');
+  return phoneNumber.replace(/(\d{3})(\d{2})(\d{3})/, "$1 $2 $3");
 }
 
+function showPopup() {
+  popup.style.display = "block";
+}
+
+function hidePopup() {
+  popup.style.display = "none";
+}
