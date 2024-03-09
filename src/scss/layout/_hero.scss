@@ -76,7 +76,6 @@
 	}
 
 	.hero-inner {
-		/* Split hero in two half */
 		display: flex;
 		justify-content: space-between;
 	}
@@ -119,3 +118,10 @@
 		height: 324px;
 	}
 }
+
+// @include media(">large") {
+// 	.hero-inner {
+// 		display: flex;
+// 		justify-content: space-between;
+// 	}
+// }
