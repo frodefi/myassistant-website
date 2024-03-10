@@ -105,7 +105,9 @@
 	background-color: gray;
 	color: red;
 }
-
+#picture1 {
+	width: 538px;
+}
 #footer_conteiner {
 	display: flex;
 	flex-direction: column;
