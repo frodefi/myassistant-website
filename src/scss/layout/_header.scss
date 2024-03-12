@@ -25,6 +25,18 @@
 	align-items: center;
 }
 
+.site-header__illustration-image {
+	display: none;
+}
+
+@include media(">medium") {
+	.site-header__illustration-image {
+		display: block;
+		position: absolute;
+		top: 0%;
+	}
+}
+
 @include media(">medium") {
 	.site-header {
 		&::before {
