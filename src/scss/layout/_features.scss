@@ -87,11 +87,11 @@
 			position: absolute;
 			left: 0;
 			top: 168px;
-			background: linear-gradient(
-				to bottom,
-				rgba(color(primary, 1), 0),
-				rgba(color(primary, 1), 0.04)
-			);
+			// background: linear-gradient(
+			// 	to bottom,
+			// 	rgba(color(primary, 1), 0),
+			// 	rgba(color(primary, 1), 0.04)
+			// );
 
 			.lights-off & {
 				display: none;
