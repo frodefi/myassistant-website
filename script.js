@@ -39,11 +39,11 @@ form.addEventListener("submit", function (event) {
       .then(() => {
         nameInput.value = "";
         telefonnummerInput.value = "";
-        popupMessage.textContent = `Takk. Du vil snart blir oppringt på telefonnummer: ${formattedPhoneNumber}`;
+        popupMessage.textContent = `Takk! Du vil snart blir kontaktet på ${phoneNumber}.`;
         showPopup();
       })
       .catch(() => {
-        popupMessage.textContent = `Something went wrong, please try again later!`;
+        popupMessage.textContent = `Noe gikk galt! Vennligst prøv igjen senere.`;
         showPopup();
       });
   }
